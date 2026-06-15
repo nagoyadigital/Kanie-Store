@@ -1,0 +1,45 @@
+{
+  "name": "Customer",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "customer_type": {
+      "type": "string",
+      "enum": [
+        "Retail",
+        "Reseller"
+      ],
+      "default": "Retail"
+    },
+    "total_purchases": {
+      "type": "number",
+      "default": 0
+    },
+    "total_spending": {
+      "type": "number",
+      "default": 0
+    },
+    "last_purchase_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "phone"
+  ]
+}

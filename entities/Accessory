@@ -1,0 +1,46 @@
+{
+  "name": "Accessory",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Charger",
+        "Cable",
+        "Case",
+        "Tempered Glass",
+        "AirPods",
+        "Power Bank",
+        "Other"
+      ],
+      "default": "Other"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "stock": {
+      "type": "number",
+      "default": 0
+    },
+    "purchase_price": {
+      "type": "number"
+    },
+    "selling_price": {
+      "type": "number"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "stock"
+  ]
+}

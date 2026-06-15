@@ -1,0 +1,72 @@
+{
+  "name": "Sale",
+  "type": "object",
+  "properties": {
+    "invoice_number": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "customer_type": {
+      "type": "string",
+      "enum": [
+        "Retail",
+        "Reseller"
+      ],
+      "default": "Retail"
+    },
+    "device_id": {
+      "type": "string"
+    },
+    "device_name": {
+      "type": "string",
+      "description": "Brand + Model for display"
+    },
+    "imei": {
+      "type": "string"
+    },
+    "selling_price": {
+      "type": "number"
+    },
+    "discount": {
+      "type": "number",
+      "default": 0
+    },
+    "final_price": {
+      "type": "number"
+    },
+    "purchase_price": {
+      "type": "number"
+    },
+    "profit": {
+      "type": "number"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "Cash",
+        "Bank Transfer",
+        "QR Payment",
+        "Credit Card"
+      ],
+      "default": "Cash"
+    },
+    "sale_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "customer_name",
+    "device_name",
+    "imei",
+    "final_price"
+  ]
+}

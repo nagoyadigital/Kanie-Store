@@ -1,0 +1,76 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "brand": {
+      "type": "string",
+      "enum": [
+        "Apple",
+        "Samsung",
+        "Xiaomi",
+        "Oppo",
+        "Vivo",
+        "Google",
+        "OnePlus",
+        "Huawei",
+        "Realme",
+        "Other"
+      ],
+      "description": "Device brand"
+    },
+    "model": {
+      "type": "string",
+      "description": "Model name, e.g. iPhone 15 Pro Max"
+    },
+    "variant": {
+      "type": "string",
+      "description": "Model variant"
+    },
+    "storage_capacity": {
+      "type": "string",
+      "enum": [
+        "32GB",
+        "64GB",
+        "128GB",
+        "256GB",
+        "512GB",
+        "1TB"
+      ],
+      "description": "Storage capacity"
+    },
+    "ram": {
+      "type": "string",
+      "description": "RAM size"
+    },
+    "color": {
+      "type": "string",
+      "description": "Device color"
+    },
+    "release_year": {
+      "type": "number",
+      "description": "Release year"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock keeping unit"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Smartphone",
+        "Tablet",
+        "Watch",
+        "Accessory"
+      ],
+      "default": "Smartphone"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Product image"
+    }
+  },
+  "required": [
+    "brand",
+    "model"
+  ]
+}

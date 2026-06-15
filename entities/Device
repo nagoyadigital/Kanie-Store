@@ -1,0 +1,224 @@
+{
+  "name": "Device",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "Reference to Product"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "storage": {
+      "type": "string"
+    },
+    "ram": {
+      "type": "string"
+    },
+    "imei1": {
+      "type": "string",
+      "description": "IMEI 1"
+    },
+    "imei2": {
+      "type": "string",
+      "description": "IMEI 2"
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "purchase_price": {
+      "type": "number",
+      "description": "Purchase price in \u00a5"
+    },
+    "selling_price": {
+      "type": "number",
+      "description": "Selling price in \u00a5"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Available",
+        "Reserved",
+        "Sold",
+        "Returned",
+        "Service",
+        "Damaged"
+      ],
+      "default": "Available"
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Used",
+        "Refurbished",
+        "Like New"
+      ],
+      "default": "New"
+    },
+    "grade": {
+      "type": "string",
+      "enum": [
+        "A+",
+        "A",
+        "B+",
+        "B",
+        "C"
+      ],
+      "default": "A+"
+    },
+    "battery_health": {
+      "type": "number",
+      "description": "Battery health percentage"
+    },
+    "battery_cycle_count": {
+      "type": "number"
+    },
+    "battery_original": {
+      "type": "boolean",
+      "default": true
+    },
+    "battery_check_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "face_id": {
+      "type": "string",
+      "enum": [
+        "Working",
+        "Not Working",
+        "N/A"
+      ],
+      "default": "N/A"
+    },
+    "touch_id": {
+      "type": "string",
+      "enum": [
+        "Working",
+        "Not Working",
+        "N/A"
+      ],
+      "default": "N/A"
+    },
+    "display_type": {
+      "type": "string",
+      "enum": [
+        "Original",
+        "Replaced",
+        "OEM"
+      ],
+      "default": "Original"
+    },
+    "true_tone": {
+      "type": "boolean",
+      "default": true
+    },
+    "dead_pixel": {
+      "type": "boolean",
+      "default": false
+    },
+    "burn_in": {
+      "type": "boolean",
+      "default": false
+    },
+    "screen_scratch": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Minor",
+        "Moderate",
+        "Heavy"
+      ],
+      "default": "None"
+    },
+    "front_camera": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Defective"
+      ],
+      "default": "Normal"
+    },
+    "rear_camera": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Defective"
+      ],
+      "default": "Normal"
+    },
+    "speaker": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Defective"
+      ],
+      "default": "Normal"
+    },
+    "microphone": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Defective"
+      ],
+      "default": "Normal"
+    },
+    "frame_condition": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Minor",
+        "Moderate",
+        "Heavy"
+      ],
+      "default": "None"
+    },
+    "back_cover_condition": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Minor",
+        "Moderate",
+        "Heavy"
+      ],
+      "default": "None"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Photo URLs"
+    },
+    "supplier_id": {
+      "type": "string"
+    },
+    "supplier_name": {
+      "type": "string"
+    },
+    "purchase_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "sale_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "brand",
+    "model",
+    "imei1",
+    "purchase_price",
+    "selling_price"
+  ]
+}

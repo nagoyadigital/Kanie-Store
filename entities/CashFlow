@@ -1,0 +1,50 @@
+{
+  "name": "CashFlow",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Cash In",
+        "Cash Out"
+      ],
+      "description": "Cash flow direction"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Device Sales",
+        "Accessory Sales",
+        "Service Revenue",
+        "Inventory Purchase",
+        "Operational",
+        "Salary",
+        "Transportation",
+        "Other"
+      ],
+      "description": "Category"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "reference_id": {
+      "type": "string",
+      "description": "Reference to sale/purchase"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "category",
+    "amount"
+  ]
+}
