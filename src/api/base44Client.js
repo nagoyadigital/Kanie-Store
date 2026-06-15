@@ -104,13 +104,14 @@ const auth = {
     return Promise.resolve(JSON.parse(raw));
   },
 
-  logout(redirectUrl) {
+  logout() {
     localStorage.removeItem(AUTH_KEY);
-    window.location.href = '/login';
+    window.location.hash = '#/login';
+    window.location.reload();
   },
 
   redirectToLogin() {
-    window.location.href = '/login';
+    window.location.hash = '#/login';
   },
 
   loginWithPassword(password) {
